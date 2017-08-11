@@ -10,4 +10,5 @@ The repository contains:
 <h3>About</h3>
 A basic tutorial on creating a react application with webpack2. The applications contains a sidebar navigation drawer(with 2 routes: currently only "Home" component is developed). The Home view is reponsible for displaying a json data. On clicking on item, shows the details of the selected item.
 
-<h3>Note</h3>: CSS been implemented in 2 ways: one using style property and other using an external scss file. You can prefer the your way of applying styles in your application
+<h3>Note</h3>
+CSS been implemented in 2 ways: one using style property and other using an external scss file. You can prefer the your way of applying styles in your application
