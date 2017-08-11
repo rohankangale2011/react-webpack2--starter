@@ -12,4 +12,4 @@ A basic tutorial on creating a react application with webpack2. The applications
 
 
 <h3>Note</h3>
-CSS been implemented in 2 ways: one using style property and other using an external scss file. You can prefer the your way of applying styles in your application
+CSS been implemented in 2 ways: one using style property and other using an external scss file. You can prefer your way of applying styles (choose either or them)in your application
