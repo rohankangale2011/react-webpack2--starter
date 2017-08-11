@@ -10,18 +10,31 @@ var config = {
         filename: 'app.bundle.js'
     },
     devServer: {
-        port: 8181
+        port: 8181,
+        historyApiFallback: true
     },
     module: {
         rules: [
-			{
-				test: /\.js$/, exclude: /node_modules/, use: "babel-loader"
-			}
-		]
+            {
+				test: /\.scss$/,
+				use: ExtractTextPlugin.extract({
+					fallback: 'style-loader',
+					loader: ['css-loader', 'sass-loader'],
+					publicPath: '/staging'
+				})
+			},
+            {
+                test: /\.js$/, exclude: /node_modules/, use: "babel-loader"
+            }
+        ]
     },
     plugins: [
         new webpack.optimize.UglifyJsPlugin(),
-        new HtmlWebpackPlugin({ template: './app/index.html' })
+        new HtmlWebpackPlugin({ template: './app/index.html' }),
+        new ExtractTextPlugin({
+			filename: "app.css",
+			allChunks: true
+		})
     ]
 }
 
